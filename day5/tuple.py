@@ -1,4 +1,4 @@
-fruits = ("apple","banana","cherry")
+fruits = ("apple","banana","cherry","apple")
 single = (10)
 mixed = ("Mike", 25 , "developer")
 
