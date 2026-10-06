@@ -27,13 +27,20 @@ def sub(a, b):
 def template():
   return render_template("index.html", name="Hello Cosmos")
 
+@app.route("/submit",methods=["GET", "POST"])
+def submit():
+  if request.method == "POST":
+   name = request.form["name"]
+   return f"hello,{name}!"
+  return render_template("form.html")
+
 @app.route("/newtemplate")
 def newtemplate():
  return render_template("page.html")
 
 # run the app
-if __name__ == "__main__":
- app.run(debug=True)
+ if __name__ == "__main__":
+  app.run(debug=True)
 
 
 
